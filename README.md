@@ -1,21 +1,16 @@
 # Wind Turbine Lifecycle Analytics Dashboard (Power BI)
 
+## Overview
+
 Interactive Power BI prototype designed to monitor offshore wind turbine lifecycle performance, deviations, equipment health, and operational risks.
 
 This project transforms manually maintained operational data into a decision-support dashboard using data modeling, DAX measures, KPI analytics, drill-through reporting, and interactive dashboard design.
-
-The solution supports both management-level oversight and turbine-level operational analysis through:
-
-- Portfolio performance monitoring  
-- Project and turbine drill-through analysis  
-- Equipment fault and risk analytics  
-- Data-driven decision support  
 
 ---
 
 ## Problem Statement
 
-Operational lifecycle data across offshore wind construction projects is often maintained manually by multiple stakeholders, creating challenges related to:
+Operational lifecycle data across offshore wind construction projects is often fragmented across stakeholders, creating challenges related to:
 
 - Transparency  
 - Consistency  
@@ -23,38 +18,38 @@ Operational lifecycle data across offshore wind construction projects is often m
 - Performance monitoring  
 - Early risk identification  
 
-This project addresses those challenges through an interactive analytical prototype built in Power BI.
+This dashboard addresses those challenges through an interactive analytical prototype built in Power BI.
 
 ---
 
-## Objectives
+## Features
 
-The dashboard is designed to support users in:
-
-- Tracking turbine lifecycle progress  
-- Monitoring durations and deviations  
-- Analyzing operational patterns  
-- Identifying risks and bottlenecks  
-- Supporting data-driven decision-making  
+- Portfolio Overview KPIs  
+- Project-level Drill-through Analysis  
+- Turbine-level Monitoring  
+- Equipment Fault Analytics  
+- Risk & Performance Dashboard  
+- Dynamic DAX KPIs  
+- Interactive Slicers and Drill-through Navigation  
 
 ---
 
-## Technologies & Skills Used
+## Technologies Used
 
 - Power BI  
-- DAX Measures  
-- Relational Data Modeling  
-- KPI Design & Analytics  
-- Data Cleaning and Transformation  
-- Interactive Dashboard UI Design  
+- DAX  
+- Data Modeling  
+- KPI Design  
+- Data Cleaning  
+- Dashboard UI Design  
 - Drill-through Reporting  
-- Risk & Performance Analysis  
+- Risk Analytics  
 
 ---
 
-## Data Model
+# Data Model
 
-The model is structured around:
+Relational model connecting:
 
 - Projects  
 - Turbines  
@@ -65,125 +60,135 @@ The model is structured around:
 - Equipment Health Data  
 - Motion Sensor Data  
 
-The model uses project-to-turbine relationships and lifecycle fact tables to support scalable filtering and analysis.
-
 ### Data Model View
-![Data Model](images/data-model.png)
+
+![alt text](<Data Model.png>)
 
 ---
 
 # Dashboard Pages
 
-## 1. Portfolio Overview
+## Portfolio Overview
 
-High-level management view showing:
+Management-level overview showing:
 
 - Total Projects  
 - Total Turbines  
 - Total Lifecycle Hours  
 - Deviations by Project  
 - Hours by Lifecycle Phase  
-- Portfolio-level performance insights  
 
-![Portfolio Overview](images/portfolio-overview.png)
-
----
-
-## 2. Project Details
-
-Project-level analysis page including:
-
-- Project-specific KPIs  
-- Loadout duration analysis  
-- Hours by lifecycle phase  
-- Deviations by phase  
-- Drill-through support to turbine-level detail  
-
-![Project Details](images/project-details.png)
+![alt text](<Portfolio Overview.png>)
 
 ---
 
-## 3. Turbine Details
+## Project Details
 
-Asset-level monitoring page showing:
+Detailed project-level analysis including:
 
-- Installation, Commissioning, and Service Hours  
-- Total Deviation per Turbine  
+- Project KPIs  
+- Loadout Duration Analysis  
+- Hours by Phase  
+- Deviations by Phase  
+- Drill-through to turbine detail  
+
+![alt text](<Project Details.png>)
+
+---
+
+## Turbine Details
+
+Asset-level turbine monitoring showing:
+
+- Lifecycle Hours  
+- Turbine Deviations  
 - Motion Sensor Status  
-- Turbine-specific lifecycle insights  
+- Turbine-specific insights  
 
-![Turbine Details](images/turbine-details.png)
+![alt text](<Turbine Details.png>)
 
 ---
 
-## 4. Equipment Health
+## Equipment Health
 
-Technical reliability monitoring page including:
+Equipment reliability monitoring including:
 
-- Equipment Fault Events  
+- Fault Events  
 - Failure Rate  
 - Failure Type Distribution  
 - Machine Type Analysis  
-- Equipment Risk Indicators  
 
-![Equipment Health](images/equipment-health.png)
+![alt text](<Equipment Health.png>)
 
 ---
 
-## 5. Risk & Performance Insights
+## Risk & Performance Insights
 
 Decision-support page focused on:
 
 - Total Deviations  
-- Average Deviation per Turbine  
-- Worst Performing Project  
-- Highest Risk Lifecycle Stage  
+- Avg Deviation per Turbine  
+- Worst Project  
+- Highest Risk Stage  
 - Top High-Risk Turbines  
-- Hours vs Deviation Analysis  
 
-![Risk & Performance](images\Risk & Performance.png)
+![alt text](<Risk & Performance.png>)
 
 ---
 
 # Key DAX Measures
 
-Examples of business logic implemented through DAX:
-
 ## Total Lifecycle Hours
-Aggregates installation, commissioning, and service hours.
+
+Combines installation, commissioning, and service hours into one total operational effort measure.
+
+---
 
 ## Deviation Total
-Combines deviations across all lifecycle stages.
+
+Aggregates deviations across all lifecycle stages to quantify performance gaps.
+
+---
 
 ## Average Deviation per Turbine
-Normalizes deviations across turbines for fair comparison.
+
+Normalizes deviations across turbines for fair project comparison.
+
+---
 
 ## Worst Project
-Ranks projects and identifies the highest-risk project.
+
+Ranks projects and identifies the project with the highest deviation.
+
+---
 
 ## Highest Risk Stage
-Identifies the lifecycle phase contributing most to deviations.
+
+Identifies the lifecycle stage contributing most to operational risk.
+
+---
 
 ## Equipment Failure Rate
-Measures proportion of equipment fault events.
+
+Calculates the proportion of equipment fault events.
 
 ---
 
 ## Business Value
 
-This prototype supports:
+Supports:
 
-- Performance monitoring across projects  
-- Early risk identification  
-- Lifecycle bottleneck detection  
-- Equipment reliability analysis  
-- Operational and management decision support  
+- Performance monitoring  
+- Risk identification  
+- Bottleneck detection  
+- Fault analysis  
+- Data-driven decision-making  
 
 ---
 
 ## Example Business Questions Answered
 
-This solution helps answer questions such as:
+This solution helps answer:
 
 - How many turbines belong to each project?  
 - Which lifecycle stage takes the longest?  
@@ -198,11 +203,11 @@ This solution helps answer questions such as:
 
 Possible extensions:
 
-- Predictive maintenance using Python/ML  
+- Predictive maintenance with Python  
 - Automated anomaly detection  
-- Real-time IoT sensor integration  
-- Streaming data dashboards  
-- Deployment as a full digital application  
+- Real-time sensor streaming  
+- IoT integration  
+- Advanced forecasting models  
 
 ---
 
@@ -212,17 +217,16 @@ Possible extensions:
 .
 ├── WindTurbineLifecycleDashboard.pbix
 ├── README.md
-└── images/
-    ├── data-model.png
-    ├── portfolio-overview.png
-    ├── project-details.png
-    ├── turbine-details.png
-    ├── equipment-health.png
-    └── risk-performance.png
+├── Data Model.png
+├── Portfolio Overview.png
+├── Project Details.png
+├── Turbine Details.png
+├── Equipment Health.png
+└── Risk & Performance.png
 ```
 
 ---
 
 ## About This Project
 
-This project was developed as a digital solutions case study inspired by offshore wind construction operations and demonstrates how Power BI can be used not only for reporting, but for building an analytical decision-support prototype.
+This project demonstrates how Power BI can be used not only for reporting, but for building an analytical decision-support prototype for offshore wind operations.
